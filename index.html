@@ -229,7 +229,7 @@ function getTranslit(text) {
 		if(!/\p{Ll}/u.test(a))
 			return a.length == 1 ? singleUpper(a, i, s)
 				: getTranslitWord(a.toLowerCase()).toUpperCase();
-		return a.match(/([\u0027\u2019\u02bc\p{Lu}]?\p{Ll}+)|(\p{Lu}+)/gu).reduce(function(p, c) {
+		return a.match(/([\u0027\u2019\u02bc\p{Lu}]?[\u0027\u2019\u02bc\p{Ll}]+)|([\u0027\u2019\u02bc\p{Lu}]+)/gu).reduce(function(p, c) {
 			if(!/\p{Ll}/u.test(c) && c.length > 1)
 				return p + getTranslitWord(c.toLowerCase()).toUpperCase();
 			var wb = getTranslitWord(c.toLowerCase());
