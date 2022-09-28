@@ -155,6 +155,14 @@ var translitWord = {
 	return text
 	.replace(/^([єюяї])/g, (found,p1) => ['je','ju','ja','ji']['єюяї'.indexOf(p1)])
 	.replace(/([\u0027\u2019\u02bc])([єюяї])/g, (found,p1,p2) => ['je','ju','ja','ji']['єюяї'.indexOf(p2)])
+	.replace(/лі/g, 'li')
+	.replace(/([тлнрсзцд])ь(?![єюяї])/g, (found,p1) => 'ċlńŕśźćď'['тлнрсзцд'.indexOf(p1)])
+	.replace(/[а-яґєіїё]/g, (found) => ['a','b','w','h','g','d','e','ę','ż','z','y','i','į','j','k','ł','m','n','o','p','r','s','t','u','f','ch','c','cz','sz','ŝ','ì','ų','ą','ë','ŷ','ê','ĵ']['абвгґдеєжзиіїйклмнопрстуфхцчшщьюяёыэъ'.indexOf(found)]);
+},
+'Украинская 2.5.1': function(text) {
+	return text
+	.replace(/^([єюяї])/g, (found,p1) => ['je','ju','ja','ji']['єюяї'.indexOf(p1)])
+	.replace(/([\u0027\u2019\u02bc])([єюяї])/g, (found,p1,p2) => ['je','ju','ja','ji']['єюяї'.indexOf(p2)])
 	.replace(/([тлнрсзцд])ь(?![єюяї])/g, (found,p1) => 'ċĺńŕśźćď'['тлнрсзцд'.indexOf(p1)])
 	.replace(/[а-яґєіїё]/g, (found) => ['a','b','w','h','g','d','e','ę','ż','z','y','i','į','j','k','l','m','n','o','p','r','s','t','u','f','ch','c','cz','sz','ŝ','ì','ų','ą','ë','ŷ','ê','ĵ']['абвгґдеєжзиіїйклмнопрстуфхцчшщьюяёыэъ'.indexOf(found)]);
 },
