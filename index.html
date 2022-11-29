@@ -589,7 +589,7 @@ function doCopyText() {
 	<input type="button" title="Without acute" value="´" onclick="outtext.innerText = outtext.innerText.replace(/[\u00b4\u02ca]+/g,'');">
 	<input type="button" title="Without Grave accent" value="`" onclick="outtext.innerText = outtext.innerText.replace(/\u0060+/g,'');">
 	<br />
-	<label for="spellchecking">Spelling</label>
+	<label for="spellchecking">Spellchecking</label>
 	<input type="checkbox" id="spellchecking">
 	<input type="button" title="İi Iı -> Ii Īī" value="İı->Iī" onclick="intext.value = intext.value.replace(/ı/g,'ī').replace(/I/g,'Ī').replace(/İ/g,'I');">
 	<input type="button" title="Only Cyrillic" value="cyr" onclick="intext.value = intext.value.replace(/[^\p{Script=Cyrillic}\p{M}\p{N}\p{S}\p{P}\p{Z}\p{C}\s\t\n\u0027\u2019\u02bc]+/gu,'');">
