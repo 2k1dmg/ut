@@ -375,7 +375,7 @@ function initpage() {
 	for(let key in translitWord)
 		options.appendChild(new Option(key,key));
 	intext.focus();
-	
+/*	
 	var alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 	for(let opt of options) {
 		let optionValue = opt.value;
@@ -383,7 +383,7 @@ function initpage() {
 			return translitWord[optionValue](letter).toUpperCase();
 		}).join(' '));
 	}
-	
+*/	
 	intext.oninput = function(event) {
 		clearTimeout(timeoutID);
 		
