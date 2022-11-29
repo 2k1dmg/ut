@@ -1,4 +1,4 @@
 # ut
-Универсальный транслитератор / Universal Transliterator
+Universal Transliterator / Универсальный транслитератор
 
-Не подходит для текста который содержит буквы **İ ı**.
+Not suitable for text that contains letters **İ ı**. / Не подходит для текста который содержит буквы **İ ı**.
