@@ -112,6 +112,12 @@ var translitWord = {
 	.replace(/sch/g, 'š')
 	.replace(/ß/g, 'ŝ');
 },
+'Немецкий 3': function(text) {
+	return text
+	.replace(/tsch/g, 'ç')
+	.replace(/sch/g, 'ş')
+	.replace(/ß/g, 'ŝ');
+},
 'Украинский 1': function(text) {
 	return text
 	.replace(/^([єюяї])/g, (found,p1) => ['je','ju','ja','ji']['єюяї'.indexOf(p1)])
