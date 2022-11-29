@@ -284,6 +284,7 @@ var translitWord = {
 },
 'Ukrainian 7': function(text) {
 	return text
+	.replace(/([\u0027\u2019\u02bc])([єюяї])/g, (found,p1,p2) => ['je','ju','ja','ji']['єюяї'.indexOf(p2)])
 	.replace(/[а-яґєіїё]/g, (found) => ['a','b','v','g','ĝ','d','e','ē','ž','z','y','i','ī','j','k','l','m','n','o','p','r','s','t','u','f','h','c','č','š','ŝ','ì','ū','ā','ë','ŷ','ê','ĵ']['абвгґдеєжзиіїйклмнопрстуфхцчшщьюяёыэъ'.indexOf(found)]);
 },
 'Georgian': function(text) {
