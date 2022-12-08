@@ -244,7 +244,7 @@ var translitWord = {
 	.replace(/цг/g, 'cgh')
 	.replace(/[а-яґєіїё]/g, (found) => ['a','b','w','h','g','d','e','je','ż','z','y','i','ji','j','k','ł','m','n','o','p','r','s','t','u','f','ch','c','cz','sz','ŝ','ì','ju','ja','ë','ŷ','ê','ĵ']['абвгґдеєжзиіїйклмнопрстуфхцчшщьюяёыэъ'.indexOf(found)]);
 },
-'Украинская 5.1': function(text) {
+'Ukrainian 5.1': function(text) {
 	return text
 	.replace(/([\u0027\u2019\u02bc])([єюяї])/g, (found,p1,p2) => ['je','ju','ja','ji']['єюяї'.indexOf(p2)])
 	.replace(/([тлнрсзцд])ь(?![єюяї])/g, (found,p1) => 'ťĺńŕśźćď'['тлнрсзцд'.indexOf(p1)])
